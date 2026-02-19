@@ -6,17 +6,17 @@ export default function HomePage() {
     const navigate = useNavigate();
     return (
         <div
-            className="min-h-screen h-screen w-screen flex flex-col items-center justify-center bg-[#3f352c] text-[#f6e7cc] px-2 sm:px-0"
+            className="min-h-screen w-screen flex flex-col items-center justify-center bg-[#3f352c] text-[#f6e7cc] p-6 sm:p-10"
             style={{ overflowX: 'hidden' }}
         >
             <h1 className="text-4xl sm:text-5xl font-extrabold mb-6 sm:mb-8 text-center">ARIEL YEO</h1>
             <p className="text-lg sm:text-xl mb-8 sm:mb-12 text-center">
                 I’m a Marketing & Brand Strategist, turning <b><u>insight</u></b> into <b><u>results</u></b> and <b><u>strategy</u></b> into measurable <b><u>growth</u></b>.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 w-full max-w-4xl justify-center" style={{ overflowX: 'auto' }}>
+            <div className="flex flex-col sm:flex-row flex-wrap gap-6 sm:gap-10 w-full max-w-4xl justify-center items-stretch" style={{ overflowX: 'auto' }}>
                 {/* Real Estate Card */}
                 <div
-                    className="bg-[#f6e7cc] text-[#3f352c] rounded-3xl overflow-hidden shadow-lg flex-1 max-w-md flex flex-col cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl min-w-0"
+                    className="bg-[#f6e7cc] text-[#3f352c] rounded-3xl overflow-hidden shadow-lg flex-1 min-w-[280px] max-w-md w-full flex-shrink-0 flex flex-col cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
                     onClick={() => navigate('/fareast')}
                     tabIndex={0}
                     role="button"
@@ -40,7 +40,7 @@ export default function HomePage() {
                 </div>
                 {/* Fintech Card */}
                 <div
-                    className="bg-[#f6e7cc] text-[#3f352c] rounded-3xl overflow-hidden shadow-lg flex-1 max-w-md flex flex-col cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl min-w-0"
+                    className="bg-[#f6e7cc] text-[#3f352c] rounded-3xl overflow-hidden shadow-lg flex-1 min-w-[280px] max-w-md w-full flex-shrink-0 flex flex-col cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
                     onClick={() => navigate('/kda')}
                     tabIndex={0}
                     role="button"
