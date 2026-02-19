@@ -32,6 +32,29 @@ export default function FarEastPage() {
                 fontSize: 'clamp(16px, 4vw, 22px)',
             }}
         >
+            {/* Responsive styles for physical, EDM, and Copywriting grids */}
+            <style>{`
+                .far-east-physical-grid {
+                    justify-content: center !important;
+                    align-items: center !important;
+                }
+                @media (max-width: 600px) {
+                    .far-east-physical-grid {
+                        flex-direction: column !important;
+                        gap: 20px !important;
+                    }
+                }
+                .far-east-edm-grid, .far-east-copy-grid {
+                    display: grid !important;
+                    grid-template-columns: 1fr !important;
+                    gap: 16px !important;
+                }
+                @media (min-width: 601px) {
+                    .far-east-edm-grid, .far-east-copy-grid {
+                        grid-template-columns: repeat(3, 1fr) !important;
+                    }
+                }
+            `}</style>
             {/* Header Bar */}
             <div style={{ width: '100%', background: '#2d241c', padding: '16px 0', position: 'sticky', top: 0, zIndex: 100 }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'flex-start', paddingLeft: 16 }}>
@@ -57,7 +80,7 @@ export default function FarEastPage() {
             {/* Section: Physical Media */}
             <section style={{ background: '#3f352c', padding: '32px 0 0 0', textAlign: 'center' }}>
                 <h2 style={{ color: '#f6e7cc', fontWeight: 700, fontSize: 'clamp(22px, 6vw, 32px)', marginBottom: 16 }}>PHYSICAL MEDIA (FOR EVENTS):</h2>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, justifyContent: 'center', marginBottom: 12 }}>
+                <div className="far-east-physical-grid" style={{ display: 'flex', flexWrap: 'wrap', gap: 16, justifyContent: 'center', alignItems: 'center', marginBottom: 12 }}>
                     <img src={physical0} alt="Physical Media 1" style={{ width: '44vw', maxWidth: 260, minWidth: 120, borderRadius: 12, boxShadow: '0 2px 16px #0003', cursor: 'pointer' }} onClick={() => setModalImg(physical0)} />
                     <img src={physical1} alt="Physical Media 2" style={{ width: '44vw', maxWidth: 260, minWidth: 120, borderRadius: 12, boxShadow: '0 2px 16px #0003', cursor: 'pointer' }} onClick={() => setModalImg(physical1)} />
                 </div>
@@ -116,7 +139,6 @@ export default function FarEastPage() {
                                     }}
                                     className="far-east-copy-grid"
                                 >
-                                    // Add responsive CSS for grids
                                     {[0, 1, 2].map(col => (
                                         <div key={col} style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
                                             <img
