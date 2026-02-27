@@ -2,7 +2,7 @@ import "../App.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import kdaBanner from "../assets/kda/kda_banner.png";
-import kdaLogo from "../assets/kda/kda_logo.jpg";
+import kdaLogo from "../assets/kda/kda_logo.png";
 import wd1 from "../assets/kda/web_design/wd_1.jpg";
 import wd2 from "../assets/kda/web_design/wd_2.jpg";
 import wd3 from "../assets/kda/web_design/wd_3.jpg";
@@ -92,7 +92,6 @@ export default function KdaPage() {
                 </div>
                 <div style={{ color: '#f6e7cc', fontSize: 'clamp(13px, 3vw, 18px)', margin: '0 auto 0 auto', maxWidth: 900 }}>
                     Co-developed the book’s cover and marketing materials, and refined selected chapters to structure Keith’s ideas into cohesive, publication-ready content.<br />
-                    make like a clickable link to website to get book: <a href="https://www.knowdecideact.com" target="_blank" rel="noopener noreferrer" style={{ color: '#b6a16b', textDecoration: 'underline' }}>https://www.knowdecideact.com</a>
                 </div>
             </section>
 
